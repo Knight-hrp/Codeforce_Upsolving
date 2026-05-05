@@ -1,0 +1,29 @@
+import java.util.*
+ 
+fun main() {
+    val sc = Scanner(System.`in`)
+    val t = sc.nextInt()
+ 
+    repeat(t) {
+        val k = sc.nextInt()
+        val a1 = sc.nextInt()
+        val b1 = sc.nextInt()
+        val a2 = sc.nextInt()
+        val b2 = sc.nextInt()
+ 
+        val sum = k + b1 + b2
+        val sum2 = a1 + a2
+ 
+        if (sum > sum2) {
+            println("YES")
+        } else if (sum == sum2) {
+            if (a1 > b1 && a2 > b2) {
+                println("NO")
+            } else {
+                println("YES")
+            }
+        } else {
+            println("NO")
+        }
+    }
+}
